@@ -2,6 +2,13 @@ const button = document.getElementById("submit");
 const input = document.getElementById("input");
 const output = document.getElementById("output");
 
+const responses = [
+  "If this is honest, it’s already enough.",
+  "You’re sharing to express, not to be approved.",
+  "Not everyone has to see themselves in it for it to matter.",
+  "Let it be what it is. That’s enough."
+];
+
 button.addEventListener("click", () => {
   const text = input.value.trim();
 
@@ -10,7 +17,6 @@ button.addEventListener("click", () => {
     return;
   }
 
-  // Simple v1 response (no AI yet)
-  output.textContent =
-    "Before you share, pause. Say it clearly, kindly, and only if it moves the moment forward.";
+  const randomIndex = Math.floor(Math.random() * responses.length);
+  output.textContent = responses[randomIndex];
 });
