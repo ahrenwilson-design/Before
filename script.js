@@ -1,19 +1,16 @@
-const button = document.getElementById("submit");
-const input = document.getElementById("input");
-const output = document.getElementById("output");
+document.addEventListener("DOMContentLoaded", () => {
+  const input = document.getElementById("input");
+  const button = document.getElementById("submit");
+  const output = document.getElementById("output");
 
-button.addEventListener("click", async () => {
-  const text = input.value.trim();
-  if (!text) return;
+  button.addEventListener("click", () => {
+    const text = input.value.trim();
 
-  output.textContent = "…";
+    if (!text) {
+      output.innerText = "Pause. What are you about to share?";
+      return;
+    }
 
-  const response = await fetch("/api/sentence", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ text })
+    output.innerText = "Before you share this, ask yourself: is it true, necessary, and kind?";
   });
-
-  const data = await response.json();
-  output.textContent = data.sentence || "Something went wrong.";
 });
