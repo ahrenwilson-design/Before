@@ -1,43 +1,61 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #fafafa;
+  background: #fff;
   color: #111;
   margin: 0;
-  padding: 0;
+  padding: 40px 20px;
 }
 
 main {
-  max-width: 600px;
-  margin: 10vh auto;
-  padding: 0 20px;
+  max-width: 520px;
+  margin: 0 auto;
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.25rem;
+  font-size: 28px;
+  margin-bottom: 24px;
 }
 
-.subtitle {
+.prompt {
+  font-size: 15px;
   color: #555;
-  margin-bottom: 2rem;
+  margin-bottom: 8px;
 }
 
 textarea {
   width: 100%;
-  min-height: 120px;
-  padding: 12px;
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  height: 120px;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #999;
 }
 
 button {
+  margin-top: 16px;
   padding: 10px 16px;
-  font-size: 1rem;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #111;
+  background: #111;
+  color: #fff;
   cursor: pointer;
 }
 
+button:hover {
+  opacity: 0.9;
+}
+
 #output {
-  margin-top: 2rem;
-  font-size: 1.3rem;
-  line-height: 1.5;
+  margin-top: 28px;
+  font-size: 18px;
+  line-height: 1.6;
+  transition: opacity 0.2s ease;
 }
